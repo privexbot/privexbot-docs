@@ -79,7 +79,7 @@ function Feature({title, icon, description}: FeatureItem) {
 export default function HomepageFeatures(): ReactNode {
   return (
     <section id="features" className={styles.features}>
-      <div className="container">
+      <div className={clsx('container', styles.featuresContainer)}>
         <div className={styles.featuresHeader}>
           <Heading as="h2" className={styles.featuresTitle}>
             Why Choose Privexbot?
@@ -88,7 +88,7 @@ export default function HomepageFeatures(): ReactNode {
             The only AI platform that guarantees true privacy through advanced cryptographic proofs
           </p>
         </div>
-        <div className="row">
+        <div className={clsx('row', styles.featuresRow)}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

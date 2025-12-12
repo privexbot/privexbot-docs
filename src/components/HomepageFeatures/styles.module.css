@@ -1,4 +1,4 @@
-/* Enhanced Features Section matching Figma design */
+/* Enhanced Features Section following Hero Pattern */
 .features {
   padding: 8rem 0;
   background: var(--ifm-background-color);
@@ -7,66 +7,42 @@
   animation: sectionFadeIn 1s ease-out;
 }
 
-.features .container {
-  max-width: 1400px;
+/* Custom Container - Following Hero Pattern */
+.featuresContainer {
+  max-width: 1400px !important;
   margin: 0 auto;
   padding: 0 2rem;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.features .row {
-  display: flex;
+/* Custom Row - Proper Card Spacing */
+.featuresRow {
+  --ifm-container-width-xl: 1320px;
+  margin-left: calc(-1 * var(--ifm-spacing-horizontal));
+  margin-right: calc(-1 * var(--ifm-spacing-horizontal));
   justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
   gap: 2rem;
-  width: 100%;
-  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
-  .features .container {
+  .featuresContainer {
     padding: 0 1.5rem;
   }
 
-  .features .row {
-    gap: 2rem;
+  .featuresRow {
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .features .container {
+  .featuresContainer {
     padding: 0 1rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .features .row {
-    gap: 3rem;
-  }
-}
-
-/* Column centering for cards */
-.features .col {
-  display: flex;
-  justify-content: center;
-  flex: 0 1 auto;
-  min-width: 320px;
-  max-width: 380px;
-}
-
-@media (min-width: 1200px) {
-  .features .col {
-    flex: 0 1 33.333%;
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 996px) {
-  .features .col {
-    min-width: 280px;
-    flex: 0 1 100%;
-    max-width: 500px;
+  .featuresRow {
+    gap: 1rem;
   }
 }
 
@@ -88,14 +64,6 @@
   margin-left: auto;
   margin-right: auto;
   animation: headerSlideIn 1.2s ease-out 0.2s both;
-  width: 100%;
-  padding: 0 2rem;
-}
-
-@media (min-width: 1024px) {
-  .featuresHeader {
-    padding: 0;
-  }
 }
 
 @keyframes headerSlideIn {
@@ -135,7 +103,6 @@
   border-radius: 20px;
   padding: 3rem 2rem;
   height: 100%;
-  width: 100%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(20px);
   position: relative;
@@ -144,6 +111,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 [data-theme='dark'] .featureCard {
