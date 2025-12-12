@@ -35,7 +35,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -52,7 +52,7 @@
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -86,7 +86,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   min-width: 140px;
 }
@@ -109,7 +109,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   min-width: 140px;
 }
 
@@ -193,7 +193,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .featureDescription {
@@ -201,7 +201,7 @@
   font-size: 0.875rem;
   line-height: 1.5;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {

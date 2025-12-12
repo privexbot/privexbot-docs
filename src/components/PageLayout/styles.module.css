@@ -63,7 +63,7 @@
   margin: 0 0 1rem 0;
   letter-spacing: 0.025em;
   text-transform: uppercase;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .heroTitle {
@@ -73,7 +73,7 @@
   line-height: 1.1;
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.02em;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 640px) {
@@ -100,7 +100,7 @@
   font-weight: 600;
   line-height: 1.2;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -115,7 +115,7 @@
   line-height: 1.7;
   max-width: 600px;
   margin: 0 auto;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -178,7 +178,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.75rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .featureDescription {
@@ -186,7 +186,7 @@
   font-size: 0.875rem;
   line-height: 1.5;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Responsive grid utilities */
@@ -233,7 +233,7 @@
   font-weight: 600;
   text-align: center;
   margin: 0 0 3rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {

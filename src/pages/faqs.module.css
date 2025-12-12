@@ -44,7 +44,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .faqIcon {
@@ -67,7 +67,7 @@
   color: var(--privexbot-gray-300);
   font-size: 1rem;
   line-height: 1.7;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   white-space: pre-line;
 }
 
@@ -112,7 +112,7 @@
   font-size: 1.75rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -126,7 +126,7 @@
   font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 2rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -160,7 +160,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: background-color 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .ctaButtonPrimary:hover {
@@ -179,7 +179,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .ctaButtonSecondary:hover {

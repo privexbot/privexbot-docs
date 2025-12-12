@@ -27,7 +27,7 @@
   font-size: 2rem;
   font-weight: 600;
   margin: 0 0 1.5rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -41,7 +41,7 @@
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -62,7 +62,7 @@
   font-weight: 600;
   text-align: center;
   margin: 0 0 3rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -128,7 +128,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .quickLinkDescription {
@@ -136,7 +136,7 @@
   font-size: 0.875rem;
   line-height: 1.5;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Search Section */
@@ -151,7 +151,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -165,7 +165,7 @@
   font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 2rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .searchActions {
@@ -193,7 +193,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: background-color 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .searchButton:hover {
@@ -212,7 +212,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .contactButton:hover {
@@ -268,7 +268,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -282,5 +282,5 @@
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }

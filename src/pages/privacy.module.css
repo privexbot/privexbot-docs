@@ -10,7 +10,7 @@
   font-size: 0.875rem;
   font-style: italic;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Content Sections */
@@ -25,7 +25,7 @@
   font-weight: 600;
   text-align: center;
   margin: 0 0 3rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -51,7 +51,7 @@
   font-size: 1rem;
   line-height: 1.7;
   margin: 0 0 1.5rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .contentText:last-child {
@@ -70,7 +70,7 @@
   line-height: 1.7;
   margin: 0 0 1.5rem 0;
   padding-left: 1.5rem;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .contentList:last-child {
@@ -115,7 +115,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* TEE Section */
@@ -167,7 +167,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .teeDescription {
@@ -175,7 +175,7 @@
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .teeFeatures {
@@ -195,7 +195,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .teeList {
@@ -204,7 +204,7 @@
   line-height: 1.6;
   margin: 0;
   padding-left: 1.5rem;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .teeList li {
@@ -270,7 +270,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.75rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .usageDescription {
@@ -278,7 +278,7 @@
   font-size: 0.875rem;
   line-height: 1.5;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Rights Grid */
@@ -318,7 +318,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.75rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .rightsDescription {
@@ -326,7 +326,7 @@
   font-size: 0.875rem;
   line-height: 1.5;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Security Section */
@@ -388,7 +388,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .securityDescription {
@@ -396,7 +396,7 @@
   font-size: 0.75rem;
   line-height: 1.5;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Contact */
@@ -421,7 +421,7 @@
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 0.75rem;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .contactItem:last-child {

@@ -10,7 +10,7 @@
   font-weight: 600;
   text-align: center;
   margin: 0 0 3rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -73,7 +73,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 1.5rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .docList {
@@ -95,7 +95,7 @@
   text-decoration: none;
   font-size: 0.875rem;
   line-height: 1.5;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   transition: color 0.2s ease;
 }
 
@@ -158,7 +158,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .supportDescription {
@@ -166,7 +166,7 @@
   font-size: 0.875rem;
   line-height: 1.6;
   margin: 0 0 1.5rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .supportLink {
@@ -174,7 +174,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 0.875rem;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   transition: color 0.2s ease;
 }
 
@@ -212,7 +212,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.75rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .troubleshootingText {
@@ -220,7 +220,7 @@
   font-size: 0.875rem;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Status Section */
@@ -253,7 +253,7 @@
   font-size: 1.75rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -267,7 +267,7 @@
   font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 2rem 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -301,7 +301,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: background-color 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .statusButtonPrimary:hover {
@@ -320,7 +320,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.2s ease;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 .statusButtonSecondary:hover {

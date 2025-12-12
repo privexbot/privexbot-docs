@@ -3,6 +3,9 @@
  * Designed to match the Privexbot brand identity with dark theme
  */
 
+/* Import Google Fonts - Manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 /* Import Tailwind CSS v4 */
 @import "tailwindcss";
 
@@ -96,8 +99,8 @@ html {
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 
   /* Typography */
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --ifm-heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-base: 'Manrope', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 /* Light theme variables */
