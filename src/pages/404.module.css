@@ -1,0 +1,286 @@
+/* Error Content */
+.errorContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.errorIcon {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--privexbot-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+  color: var(--privexbot-white);
+}
+
+.errorIcon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.errorTitle {
+  color: var(--privexbot-white);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .errorTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.errorDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .errorDescription {
+    font-size: 1.125rem;
+  }
+}
+
+/* Quick Links Section */
+.quickLinksSection {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quickLinksTitle {
+  color: var(--privexbot-white);
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .quickLinksTitle {
+    font-size: 2rem;
+  }
+}
+
+.quickLinksGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .quickLinksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .quickLinksGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.quickLinkCard {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.quickLinkCard:hover {
+  border-color: var(--privexbot-gray-700);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.quickLinkIcon {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--privexbot-blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  color: var(--privexbot-white);
+}
+
+.quickLinkIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.quickLinkTitle {
+  color: var(--privexbot-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.quickLinkDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Search Section */
+.searchSection {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.searchTitle {
+  color: var(--privexbot-white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .searchTitle {
+    font-size: 1.75rem;
+  }
+}
+
+.searchDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.searchActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .searchActions {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.searchButton {
+  background-color: var(--privexbot-blue);
+  color: var(--privexbot-white);
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.searchButton:hover {
+  background-color: #4752c4;
+  color: var(--privexbot-white);
+  text-decoration: none;
+}
+
+.contactButton {
+  background-color: transparent;
+  color: var(--privexbot-gray-400);
+  border: 1px solid var(--privexbot-gray-800);
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.contactButton:hover {
+  color: var(--privexbot-white);
+  border-color: var(--privexbot-gray-700);
+  text-decoration: none;
+}
+
+/* Fun Facts Section */
+.funFactsSection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.funFactCard {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.funFactCard:hover {
+  border-color: var(--privexbot-gray-700);
+}
+
+@media (min-width: 768px) {
+  .funFactCard {
+    padding: 3rem;
+  }
+}
+
+.funFactIcon {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--privexbot-blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  color: var(--privexbot-white);
+}
+
+.funFactIcon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.funFactTitle {
+  color: var(--privexbot-white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .funFactTitle {
+    font-size: 1.75rem;
+  }
+}
+
+.funFactText {
+  color: var(--privexbot-gray-400);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}

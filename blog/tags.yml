@@ -1,0 +1,44 @@
+product:
+  label: Product
+  permalink: /product
+  description: Product updates and features
+
+workflow:
+  label: Workflow
+  permalink: /workflow
+  description: Workflow optimization and productivity
+
+chatbots:
+  label: Chatbots
+  permalink: /chatbots
+  description: AI chatbot development and deployment
+
+privacy:
+  label: Privacy
+  permalink: /privacy
+  description: Privacy-first technology and data protection
+
+architecture:
+  label: Architecture
+  permalink: /architecture
+  description: Technical architecture and system design
+
+security:
+  label: Security
+  permalink: /security
+  description: Security features and best practices
+
+tee:
+  label: TEE
+  permalink: /tee
+  description: Trusted Execution Environment technology
+
+tutorial:
+  label: Tutorial
+  permalink: /tutorial
+  description: Step-by-step guides and tutorials
+
+getting-started:
+  label: Getting Started
+  permalink: /getting-started
+  description: Beginner guides and onboarding

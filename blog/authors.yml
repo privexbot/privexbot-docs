@@ -1,0 +1,76 @@
+ethan:
+  name: Ethan Taylor
+  title: Head of Product, Privexbot
+  url: https://linkedin.com/in/ethantaylor
+  image_url: https://github.com/privexbot.png
+  page: true
+  socials:
+    x: ethantaylor_dev
+    linkedin: ethantaylor
+    github: ethantaylor
+
+brian:
+  name: Brian Yamilla
+  title: Senior Backend Engineer, Privexbot
+  url: https://linkedin.com/in/brianyamilla
+  image_url: https://github.com/privexbot.png
+  page: true
+  socials:
+    x: brianyamilla
+    linkedin: brianyamilla
+    github: brianyamilla
+
+kara:
+  name: Kara Martina
+  title: Technical Writer, Privexbot
+  url: https://linkedin.com/in/karamartina
+  image_url: https://github.com/privexbot.png
+  page: true
+  socials:
+    x: karamartina
+    linkedin: karamartina
+    github: karamartina
+
+anya:
+  name: Anya Singh
+  title: Senior UI/UX Designer, Privexbot
+  url: https://linkedin.com/in/anyasingh
+  image_url: https://github.com/privexbot.png
+  page: true
+  socials:
+    x: anyasingh_ui
+    linkedin: anyasingh
+    github: anyasingh
+
+maria:
+  name: Maria Santos
+  title: VP of Operations, Privexbot
+  url: https://linkedin.com/in/mariasantos
+  image_url: https://github.com/privexbot.png
+  page: true
+  socials:
+    x: mariasantos_ops
+    linkedin: mariasantos
+    github: mariasantos
+
+alex:
+  name: Alex Rivera
+  title: Brand Designer, Privexbot
+  url: https://linkedin.com/in/alexrivera
+  image_url: https://github.com/privexbot.png
+  page: true
+  socials:
+    x: alexrivera_design
+    linkedin: alexrivera
+    github: alexrivera
+
+james:
+  name: James Wright
+  title: Senior Frontend Engineer, Privexbot
+  url: https://linkedin.com/in/jameswright
+  image_url: https://github.com/privexbot.png
+  page: true
+  socials:
+    x: jameswright_dev
+    linkedin: jameswright
+    github: jameswright

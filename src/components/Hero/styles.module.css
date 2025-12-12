@@ -1,0 +1,123 @@
+.hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--privexbot-black);
+  overflow: hidden;
+}
+
+.gridBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.6;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 6rem 2rem;
+  }
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--privexbot-gray-400);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1rem;
+  }
+}
+
+.subtitle {
+  color: var(--privexbot-white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: 4rem;
+  }
+}
+
+.description {
+  color: var(--privexbot-gray-400);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.25rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero {
+    min-height: 300px;
+  }
+
+  .container {
+    padding: 3rem 1rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

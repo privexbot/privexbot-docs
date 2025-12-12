@@ -1,0 +1,114 @@
+/* Blog Post Content Styling */
+.blogPostContent {
+  color: #374151;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+}
+
+.blogPostContent h1,
+.blogPostContent h2,
+.blogPostContent h3,
+.blogPostContent h4,
+.blogPostContent h5,
+.blogPostContent h6 {
+  color: #111827;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blogPostContent h2 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+.blogPostContent h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.blogPostContent p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.blogPostContent img {
+  width: 100%;
+  height: 300px;
+  background-color: #e5e7eb;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 2.5rem 0;
+  display: block;
+}
+
+/* Handle missing or placeholder images */
+.blogPostContent img[src=""],
+.blogPostContent img[alt*="placeholder"] {
+  background-color: #e5e7eb;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 48' fill='%239ca3af' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='24' r='10'/%3E%3Cpath d='M40 14l12 20h-24z'/%3E%3Crect x='70' y='14' width='20' height='20'/%3E%3C/svg%3E");
+  background-size: 120px 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blogPostContent ul,
+.blogPostContent ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.blogPostContent li {
+  margin-bottom: 0.5rem;
+}
+
+.blogPostContent blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.blogPostContent code {
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.blogPostContent pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.blogPostContent pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.blogPostContent a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.blogPostContent a:hover {
+  color: #2563eb;
+}
+
+.blogPostContent strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.blogPostContent em {
+  font-style: italic;
+}

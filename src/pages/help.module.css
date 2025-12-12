@@ -1,0 +1,330 @@
+/* Quick Start Section */
+.quickStartSection {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  color: var(--privexbot-white);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.quickStartGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .quickStartGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .quickStartGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Documentation Section */
+.documentationSection {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.docGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .docGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.docCategory {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.2s ease;
+}
+
+.docCategory:hover {
+  border-color: var(--privexbot-gray-700);
+}
+
+.docCategoryTitle {
+  color: var(--privexbot-white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.docList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.docList li {
+  margin-bottom: 0.75rem;
+}
+
+.docList li:last-child {
+  margin-bottom: 0;
+}
+
+.docLink {
+  color: var(--privexbot-gray-400);
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.docLink:hover {
+  color: var(--privexbot-blue);
+  text-decoration: none;
+}
+
+/* Support Section */
+.supportSection {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.supportGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .supportGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.supportCard {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.supportCard:hover {
+  border-color: var(--privexbot-gray-700);
+  transform: translateY(-2px);
+}
+
+.supportIcon {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--privexbot-blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  color: var(--privexbot-white);
+}
+
+.supportIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.supportTitle {
+  color: var(--privexbot-white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.supportDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.supportLink {
+  color: var(--privexbot-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.supportLink:hover {
+  color: #4752c4;
+  text-decoration: none;
+}
+
+/* Troubleshooting Section */
+.troubleshootingSection {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.troubleshootingContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.troubleshootingItem {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.troubleshootingItem:hover {
+  border-color: var(--privexbot-gray-700);
+}
+
+.troubleshootingTitle {
+  color: var(--privexbot-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.troubleshootingText {
+  color: var(--privexbot-gray-400);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Status Section */
+.statusSection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.statusCard {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.statusCard:hover {
+  border-color: var(--privexbot-gray-700);
+}
+
+@media (min-width: 768px) {
+  .statusCard {
+    padding: 3rem;
+  }
+}
+
+.statusTitle {
+  color: var(--privexbot-white);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .statusTitle {
+    font-size: 2rem;
+  }
+}
+
+.statusDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .statusDescription {
+    font-size: 1.125rem;
+  }
+}
+
+.statusButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .statusButtons {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.statusButtonPrimary {
+  background-color: var(--privexbot-blue);
+  color: var(--privexbot-white);
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.statusButtonPrimary:hover {
+  background-color: #4752c4;
+  color: var(--privexbot-white);
+  text-decoration: none;
+}
+
+.statusButtonSecondary {
+  background-color: transparent;
+  color: var(--privexbot-gray-400);
+  border: 1px solid var(--privexbot-gray-800);
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.statusButtonSecondary:hover {
+  color: var(--privexbot-white);
+  border-color: var(--privexbot-gray-700);
+  text-decoration: none;
+}

@@ -1,0 +1,254 @@
+/* Hero Section */
+.heroSection {
+  position: relative;
+  padding: 6rem 0 4rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 8rem 0 6rem;
+    min-height: 500px;
+  }
+}
+
+.withGrid .gridBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(156, 163, 175, 0.2) 1px, transparent 0);
+  background-size: 48px 48px;
+  background-position: 0 0, 24px 24px;
+  opacity: 0.7;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroCategory {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.heroTitle {
+  color: #111827;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 640px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+}
+
+.heroSubtitle {
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .heroSubtitle {
+    font-size: 2.5rem;
+  }
+}
+
+.heroDescription {
+  color: #6b7280;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .heroDescription {
+    font-size: 1.25rem;
+  }
+}
+
+/* Main Content */
+.mainContent {
+  background-color: var(--privexbot-black);
+  color: var(--privexbot-white);
+  min-height: 50vh;
+}
+
+/* Page Section */
+.pageSection {
+  padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .pageSection {
+    padding: 6rem 0;
+  }
+}
+
+/* Feature Card */
+.featureCard {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.2s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--privexbot-gray-700);
+  transform: translateY(-2px);
+}
+
+.featureIcon {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--privexbot-blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--privexbot-white);
+}
+
+.featureIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.featureTitle {
+  color: var(--privexbot-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.featureDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Responsive grid utilities */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.gridCols1 {
+  grid-template-columns: 1fr;
+}
+
+.gridCols2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gridCols3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gridCols4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .gridCols2,
+  .gridCols3,
+  .gridCols4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gridCols3,
+  .gridCols4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Section headings */
+.sectionTitle {
+  color: var(--privexbot-white);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Content styles */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contentLarge {
+  max-width: 1000px;
+  margin: 0 auto;
+}

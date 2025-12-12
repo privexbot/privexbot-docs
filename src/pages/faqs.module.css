@@ -1,0 +1,189 @@
+/* FAQ Content */
+.faqContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faqItem:hover {
+  border-color: var(--privexbot-gray-700);
+}
+
+.faqButton {
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.faqButton:hover {
+  background-color: var(--privexbot-gray-800);
+}
+
+.faqQuestion {
+  color: var(--privexbot-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.faqIcon {
+  color: var(--privexbot-gray-400);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.faqIconOpen {
+  transform: rotate(180deg);
+  color: var(--privexbot-blue);
+}
+
+.faqAnswer {
+  border-top: 1px solid var(--privexbot-gray-800);
+  animation: fadeIn 0.2s ease;
+}
+
+.faqAnswerContent {
+  padding: 1.5rem;
+  color: var(--privexbot-gray-300);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  white-space: pre-line;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Section */
+.ctaSection {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaCard {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.ctaCard:hover {
+  border-color: var(--privexbot-gray-700);
+}
+
+@media (min-width: 768px) {
+  .ctaCard {
+    padding: 3rem;
+  }
+}
+
+.ctaTitle {
+  color: var(--privexbot-white);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}
+
+.ctaDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .ctaDescription {
+    font-size: 1.125rem;
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .ctaButtons {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.ctaButtonPrimary {
+  background-color: var(--privexbot-blue);
+  color: var(--privexbot-white);
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.ctaButtonPrimary:hover {
+  background-color: #4752c4;
+  color: var(--privexbot-white);
+  text-decoration: none;
+}
+
+.ctaButtonSecondary {
+  background-color: transparent;
+  color: var(--privexbot-gray-400);
+  border: 1px solid var(--privexbot-gray-800);
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.ctaButtonSecondary:hover {
+  color: var(--privexbot-white);
+  border-color: var(--privexbot-gray-700);
+  text-decoration: none;
+}

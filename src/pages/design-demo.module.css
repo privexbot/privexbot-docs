@@ -1,0 +1,41 @@
+.demoContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  color: var(--privexbot-white);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.sectionDescription {
+  color: var(--privexbot-gray-400);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.featureList {
+  color: var(--privexbot-gray-300);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 1.5rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.featureList li {
+  margin-bottom: 0.5rem;
+}
+
+.featureList li:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,110 @@
+/* Theme Toggle Button Styles */
+
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--privexbot-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.toggle:focus {
+  outline: 2px solid var(--privexbot-blue);
+  outline-offset: 2px;
+}
+
+.toggle:active {
+  transform: scale(0.95);
+}
+
+/* Icon container for transition animations */
+.iconContainer {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.iconVisible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.iconHidden {
+  opacity: 0;
+  transform: rotate(180deg) scale(0.8);
+}
+
+/* Light theme adjustments */
+[data-theme='light'] .toggle {
+  color: var(--privexbot-black);
+}
+
+[data-theme='light'] .toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .toggle {
+  color: var(--privexbot-white);
+}
+
+[data-theme='dark'] .toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .toggle {
+    border: 2px solid currentColor;
+  }
+
+  .toggle:focus {
+    outline-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .toggle,
+  .icon {
+    transition: none;
+  }
+
+  .toggle:hover {
+    transform: none;
+  }
+
+  .toggle:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,361 @@
+/**
+ * Privexbot custom styles for documentation and blog site
+ * Designed to match the Privexbot brand identity with dark theme
+ */
+
+/* Import Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Enhanced Animations and Utilities */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Privexbot Brand Colors */
+:root {
+  /* Primary Brand Colors */
+  --privexbot-black: #000000;
+  --privexbot-white: #ffffff;
+  --privexbot-blue: #5865f2; /* CTA button color */
+  --privexbot-gray-900: #111111;
+  --privexbot-gray-800: #1a1a1a;
+  --privexbot-gray-700: #2a2a2a;
+  --privexbot-gray-600: #3a3a3a;
+  --privexbot-gray-500: #6b7280;
+  --privexbot-gray-400: #9ca3af;
+
+  /* Infima Variables Override */
+  --ifm-color-primary: var(--privexbot-blue);
+  --ifm-color-primary-dark: #4752c4;
+  --ifm-color-primary-darker: #424ba3;
+  --ifm-color-primary-darkest: #3a4285;
+  --ifm-color-primary-light: #6b78ff;
+  --ifm-color-primary-lighter: #7a85ff;
+  --ifm-color-primary-lightest: #8a93ff;
+
+  /* Background Colors */
+  --ifm-background-color: var(--privexbot-black);
+  --ifm-color-content: var(--privexbot-white);
+  --ifm-color-content-secondary: var(--privexbot-gray-400);
+
+  /* Navbar */
+  --ifm-navbar-background-color: var(--privexbot-black);
+  --ifm-navbar-link-color: var(--privexbot-white);
+  --ifm-navbar-link-hover-color: var(--privexbot-gray-400);
+
+  /* Footer */
+  --ifm-footer-background-color: var(--privexbot-black);
+  --ifm-footer-color: var(--privexbot-gray-400);
+  --ifm-footer-link-color: var(--privexbot-gray-400);
+  --ifm-footer-link-hover-color: var(--privexbot-white);
+  --ifm-footer-title-color: var(--privexbot-white);
+
+  /* Code */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Light theme variables */
+[data-theme='light'] {
+  /* Light Theme Colors */
+  --privexbot-hero-bg: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --privexbot-hero-text: #1e293b;
+  --privexbot-hero-subtitle: #64748b;
+  --privexbot-hero-badge-bg: rgba(88, 101, 242, 0.1);
+  --privexbot-hero-badge-border: rgba(88, 101, 242, 0.2);
+  --privexbot-hero-badge-text: var(--privexbot-blue);
+  --privexbot-grid-color: rgba(148, 163, 184, 0.1);
+  --privexbot-secondary-btn-bg: rgba(255, 255, 255, 0.9);
+  --privexbot-secondary-btn-border: rgba(148, 163, 184, 0.3);
+  --privexbot-secondary-btn-text: #475569;
+
+  /* Infima Variables Override */
+  --ifm-color-primary: var(--privexbot-blue);
+  --ifm-color-primary-dark: #4752c4;
+  --ifm-color-primary-darker: #424ba3;
+  --ifm-color-primary-darkest: #3a4285;
+  --ifm-color-primary-light: #6b78ff;
+  --ifm-color-primary-lighter: #7a85ff;
+  --ifm-color-primary-lightest: #8a93ff;
+
+  /* Background Colors */
+  --ifm-background-color: #ffffff;
+  --ifm-color-content: #1e293b;
+  --ifm-color-content-secondary: #64748b;
+
+  /* Code */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme variables */
+[data-theme='dark'] {
+  /* Dark Theme Colors */
+  --privexbot-hero-bg: linear-gradient(135deg, var(--privexbot-black) 0%, var(--privexbot-gray-900) 100%);
+  --privexbot-hero-text: var(--privexbot-white);
+  --privexbot-hero-subtitle: var(--privexbot-gray-400);
+  --privexbot-hero-badge-bg: rgba(88, 101, 242, 0.2);
+  --privexbot-hero-badge-border: rgba(88, 101, 242, 0.3);
+  --privexbot-hero-badge-text: #6b78ff;
+  --privexbot-grid-color: rgba(255, 255, 255, 0.05);
+  --privexbot-secondary-btn-bg: rgba(255, 255, 255, 0.1);
+  --privexbot-secondary-btn-border: rgba(255, 255, 255, 0.2);
+  --privexbot-secondary-btn-text: var(--privexbot-white);
+
+  /* Infima Variables Override */
+  --ifm-color-primary: var(--privexbot-blue);
+  --ifm-color-primary-dark: #4752c4;
+  --ifm-color-primary-darker: #424ba3;
+  --ifm-color-primary-darkest: #3a4285;
+  --ifm-color-primary-light: #6b78ff;
+  --ifm-color-primary-lighter: #7a85ff;
+  --ifm-color-primary-lightest: #8a93ff;
+
+  /* Background Colors */
+  --ifm-background-color: var(--privexbot-black);
+  --ifm-color-content: var(--privexbot-white);
+  --ifm-color-content-secondary: var(--privexbot-gray-400);
+
+  /* Code */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced Global Navbar Styles - Matching Figma Design */
+.navbar {
+  background: var(--privexbot-black) !important;
+  border-bottom: 1px solid var(--privexbot-gray-800) !important;
+  padding: 0 !important;
+  height: 64px !important;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Navbar animation on scroll */
+.navbar--fixed-top {
+  animation: slideInFromTop 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar__brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--privexbot-white) !important;
+}
+
+.navbar__item {
+  color: var(--privexbot-white) !important;
+}
+
+.navbar__link {
+  color: var(--privexbot-white) !important;
+  font-weight: 500;
+}
+
+.navbar__link:hover {
+  color: var(--privexbot-gray-400) !important;
+}
+
+/* CTA Button Styles */
+.navbar__item--cta .navbar__link {
+  background-color: var(--privexbot-blue) !important;
+  color: var(--privexbot-white) !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 600 !important;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.navbar__item--cta .navbar__link:hover {
+  background-color: #4752c4 !important;
+  color: var(--privexbot-white) !important;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--privexbot-black) !important;
+  border-top: 1px solid var(--privexbot-gray-800);
+}
+
+.footer__title {
+  color: var(--privexbot-white) !important;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.footer__item {
+  color: var(--privexbot-gray-400) !important;
+}
+
+.footer__link-item {
+  color: var(--privexbot-gray-400) !important;
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--privexbot-white) !important;
+}
+
+.footer__copyright {
+  color: var(--privexbot-gray-500) !important;
+  font-size: 0.875rem;
+  text-align: center;
+  border-top: 1px solid var(--privexbot-gray-800);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+/* Grid Background Pattern */
+.grid-pattern {
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--privexbot-gray-600) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Enhanced Typography and Global Styles */
+body {
+  background-color: var(--privexbot-black);
+  color: var(--privexbot-white);
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Enhanced transitions for all interactive elements */
+* {
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Improve focus states globally */
+*:focus-visible {
+  outline: 2px solid var(--privexbot-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Enhanced link styles */
+a:not(.navbar__link):not(.button) {
+  color: var(--privexbot-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:not(.navbar__link):not(.button):hover {
+  color: #6366f1;
+  text-decoration: underline;
+  text-decoration-color: rgba(99, 102, 241, 0.4);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* Page transitions */
+.main-wrapper {
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Main content area */
+.main-wrapper {
+  background-color: var(--privexbot-black);
+}
+
+/* Sidebar styles */
+.theme-doc-sidebar-container {
+  background-color: var(--privexbot-gray-900) !important;
+  border-right: 1px solid var(--privexbot-gray-800);
+}
+
+.menu__link {
+  color: var(--privexbot-gray-400) !important;
+}
+
+.menu__link:hover, .menu__link--active {
+  color: var(--privexbot-white) !important;
+  background-color: var(--privexbot-gray-800) !important;
+}
+
+/* Blog specific styles */
+.blog-list__item {
+  background-color: var(--privexbot-gray-900);
+  border: 1px solid var(--privexbot-gray-800);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.blog-list__item:hover {
+  border-color: var(--privexbot-gray-700);
+}
+
+/* Custom utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--privexbot-white) 0%, var(--privexbot-gray-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

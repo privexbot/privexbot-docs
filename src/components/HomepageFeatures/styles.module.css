@@ -1,0 +1,469 @@
+/* Enhanced Features Section matching Figma design */
+.features {
+  padding: 8rem 0;
+  background: var(--ifm-background-color);
+  position: relative;
+  overflow: hidden;
+  animation: sectionFadeIn 1s ease-out;
+}
+
+.features .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.features .row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .features .container {
+    padding: 0 1.5rem;
+  }
+
+  .features .row {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .features .row {
+    gap: 3rem;
+  }
+}
+
+/* Column centering for cards */
+.features .col {
+  display: flex;
+  justify-content: center;
+  flex: 0 1 auto;
+  min-width: 320px;
+  max-width: 380px;
+}
+
+@media (min-width: 1200px) {
+  .features .col {
+    flex: 0 1 33.333%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 996px) {
+  .features .col {
+    min-width: 280px;
+    flex: 0 1 100%;
+    max-width: 500px;
+  }
+}
+
+@keyframes sectionFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.featuresHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: headerSlideIn 1.2s ease-out 0.2s both;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+@media (min-width: 1024px) {
+  .featuresHeader {
+    padding: 0;
+  }
+}
+
+@keyframes headerSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.featuresTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--ifm-color-content);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.featuresSubtitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.featureCard {
+  background: var(--card-bg, rgba(255, 255, 255, 0.5));
+  border: 1px solid var(--card-border, rgba(148, 163, 184, 0.2));
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  animation: cardSlideUp 1.6s ease-out var(--stagger-delay, 0.4s) both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+[data-theme='dark'] .featureCard {
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light'] .featureCard {
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(148, 163, 184, 0.2);
+}
+
+@keyframes cardSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays for cards */
+.featureCard:nth-child(1) {
+  --stagger-delay: 0.4s;
+}
+
+.featureCard:nth-child(2) {
+  --stagger-delay: 0.6s;
+}
+
+.featureCard:nth-child(3) {
+  --stagger-delay: 0.8s;
+}
+
+.featureCard:hover {
+  background: var(--card-hover-bg, rgba(255, 255, 255, 0.8));
+  border-color: rgba(88, 101, 242, 0.4);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px var(--card-shadow, rgba(0, 0, 0, 0.1));
+}
+
+[data-theme='dark'] .featureCard:hover {
+  --card-hover-bg: rgba(255, 255, 255, 0.08);
+  --card-shadow: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='light'] .featureCard:hover {
+  --card-hover-bg: rgba(255, 255, 255, 0.9);
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(88, 101, 242, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.featureCard:hover::before {
+  left: 100%;
+}
+
+.featureIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--privexbot-blue) 0%, #6366f1 100%);
+  border-radius: 20px;
+  margin: 0 auto 2rem auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.featureIconContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featureCard:hover .featureIconContainer::before {
+  opacity: 1;
+}
+
+.featureCard:hover .featureIconContainer {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(88, 101, 242, 0.3);
+}
+
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--privexbot-white);
+  z-index: 1;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1);
+}
+
+.featureContent {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-content);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.featureDescription {
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.featuresFooter {
+  text-align: center;
+  margin-top: 5rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: footerSlideIn 1.8s ease-out 1s both;
+}
+
+@keyframes footerSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features {
+    padding: 6rem 0;
+  }
+
+  .featuresTitle {
+    font-size: 2.5rem;
+  }
+
+  .featuresSubtitle {
+    font-size: 1.125rem;
+  }
+
+  .featureCard {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .featureIconContainer {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureIcon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 4rem 0;
+  }
+
+  .featuresHeader {
+    margin-bottom: 3rem;
+  }
+
+  .featuresTitle {
+    font-size: 2rem;
+  }
+
+  .featuresSubtitle {
+    font-size: 1rem;
+  }
+
+  .featureCard {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .featureIconContainer {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.25rem;
+  }
+
+  .featureIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .featureTitle {
+    font-size: 1.25rem;
+  }
+
+  .featureDescription {
+    font-size: 0.95rem;
+  }
+
+  .featuresFooter {
+    margin-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding: 3rem 0;
+  }
+
+  .featuresTitle {
+    font-size: 1.75rem;
+  }
+
+  .featureCard {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.ctaButton {
+  padding: 0.875rem 2rem !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+}
+
+.ctaButton:hover {
+  text-decoration: none !important;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .features {
+    padding: 4rem 0;
+  }
+
+  .featuresTitle {
+    font-size: 2rem;
+  }
+
+  .featureCard {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .featuresFooter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .features {
+    padding: 3rem 0;
+  }
+
+  .featuresHeader {
+    margin-bottom: 3rem;
+  }
+
+  .featuresTitle {
+    font-size: 1.75rem;
+  }
+
+  .featuresSubtitle {
+    font-size: 1rem;
+  }
+
+  .featureCard {
+    text-align: center;
+  }
+
+  .featureContent {
+    text-align: center;
+  }
+}
