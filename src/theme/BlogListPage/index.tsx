@@ -181,12 +181,15 @@ function BlogListPageContent(props: Props): React.JSX.Element {
                 </div>
                 <div className={styles.blogCardContent}>
                   <span className={`${styles.categoryTag} ${
-                    metadata.tags?.[0]?.label === 'Engineering' ? styles.categoryEngineering :
-                    metadata.tags?.[0]?.label === 'Design' ? styles.categoryDesign :
-                    metadata.tags?.[0]?.label === 'Company' ? styles.categoryCompany :
+                    ['Architecture', 'TEE', 'Security'].includes(metadata.tags?.[0]?.label) ? styles.categoryEngineering :
+                    ['Product', 'Workflow'].includes(metadata.tags?.[0]?.label) ? styles.categoryDesign :
+                    ['Privacy', 'Tutorial'].includes(metadata.tags?.[0]?.label) ? styles.categoryCompany :
                     styles.categoryNews
                   }`}>
-                    {metadata.tags?.[0]?.label || 'News'}
+                    {['Architecture', 'TEE', 'Security'].includes(metadata.tags?.[0]?.label) ? 'Engineering' :
+                     ['Product', 'Workflow'].includes(metadata.tags?.[0]?.label) ? 'Design' :
+                     ['Privacy', 'Tutorial'].includes(metadata.tags?.[0]?.label) ? 'Company' :
+                     'News'}
                   </span>
                   <h3 className={styles.blogCardTitle}>
                     <a href={metadata.permalink}>{metadata.title}</a>
