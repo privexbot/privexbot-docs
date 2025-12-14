@@ -10,7 +10,7 @@ import TOC from '@theme/TOC';
 import type {Props} from '@theme/BlogPostPage';
 import styles from './styles.module.css';
 
-function BlogPostPageContent({sidebar, children}: {sidebar: any; children?: React.ReactNode}): React.JSX.Element {
+function BlogPostPageContent({children}: {children?: React.ReactNode}): React.JSX.Element {
   const {metadata, toc} = useBlogPost();
   const {nextItem, prevItem, frontMatter} = metadata;
   const {
@@ -21,15 +21,57 @@ function BlogPostPageContent({sidebar, children}: {sidebar: any; children?: Reac
 
   return (
     <BlogLayout
-      sidebar={sidebar}
+      sidebar={{
+        title: 'Navigation',
+        items: []
+      }}
       toc={
         !hideTableOfContents && toc.length > 0 ? (
-          <TOC
-            toc={toc}
-            minHeadingLevel={tocMinHeadingLevel}
-            maxHeadingLevel={tocMaxHeadingLevel}
-          />
-        ) : undefined
+          <div className={styles.blogSidebar}>
+            <div className={styles.tocWidget}>
+              <h3 className={styles.tocTitle}>On this page</h3>
+              <TOC
+                toc={toc}
+                minHeadingLevel={tocMinHeadingLevel}
+                maxHeadingLevel={tocMaxHeadingLevel}
+              />
+            </div>
+
+            <div className={styles.newsletterWidget}>
+              <h3 className={styles.newsletterTitle}>Subscribe to our newsletter</h3>
+              <p className={styles.newsletterDescription}>
+                Our bi-weekly newsletter full of inspiration, podcasts, trends and news.
+              </p>
+              <form className={styles.newsletterForm}>
+                <input
+                  type="email"
+                  placeholder="you@company.com"
+                  className={styles.emailInput}
+                />
+                <button type="submit" className={styles.subscribeButton}>
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        ) : (
+          <div className={styles.newsletterWidget}>
+            <h3 className={styles.newsletterTitle}>Subscribe to our newsletter</h3>
+            <p className={styles.newsletterDescription}>
+              Our bi-weekly newsletter full of inspiration, podcasts, trends and news.
+            </p>
+            <form className={styles.newsletterForm}>
+              <input
+                type="email"
+                placeholder="you@company.com"
+                className={styles.emailInput}
+              />
+              <button type="submit" className={styles.subscribeButton}>
+                Subscribe
+              </button>
+            </form>
+          </div>
+        )
       }>
       <div className={styles.blogPostContainer}>
         {/* Blog Post Header */}
@@ -91,25 +133,6 @@ function BlogPostPageContent({sidebar, children}: {sidebar: any; children?: Reac
             )}
           </article>
 
-          {/* Newsletter Sidebar */}
-          <aside className={styles.sidebar}>
-            <div className={styles.newsletterWidget}>
-              <h3 className={styles.newsletterTitle}>Subscribe to our newsletter</h3>
-              <p className={styles.newsletterDescription}>
-                Our bi-weekly newsletter full of inspiration, podcasts, trends and news.
-              </p>
-              <form className={styles.newsletterForm}>
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  className={styles.emailInput}
-                />
-                <button type="submit" className={styles.subscribeButton}>
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </aside>
         </div>
       </div>
     </BlogLayout>
@@ -126,7 +149,7 @@ export default function BlogPostPage(props: Props): React.JSX.Element {
           ThemeClassNames.page.blogPostPage,
         )}>
         <BlogPostPageMetadata />
-        <BlogPostPageContent sidebar={props.sidebar as any}>
+        <BlogPostPageContent>
           <BlogPostContent />
         </BlogPostPageContent>
       </HtmlClassNameProvider>

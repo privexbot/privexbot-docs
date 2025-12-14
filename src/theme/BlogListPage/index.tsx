@@ -153,10 +153,10 @@ function BlogListPageContent(props: Props): React.JSX.Element {
         {/* Category Tags */}
         <div className={styles.categoriesSection}>
           <div className={styles.categoryTags}>
-            <span className={`${styles.categoryTag} ${styles.categoryDesign}`}>Design</span>
-            <span className={`${styles.categoryTag} ${styles.categoryEngineering}`}>Engineering</span>
-            <span className={`${styles.categoryTag} ${styles.categoryCompany}`}>Company</span>
-            <span className={`${styles.categoryTag} ${styles.categoryNews}`}>News</span>
+            <a href="/blog/tags/product" className={`${styles.categoryTag} ${styles.categoryDesign}`}>Design</a>
+            <a href="/blog/tags/architecture" className={`${styles.categoryTag} ${styles.categoryEngineering}`}>Engineering</a>
+            <a href="/blog/tags/privacy" className={`${styles.categoryTag} ${styles.categoryCompany}`}>Privacy</a>
+            <a href="/blog/tags/tutorial" className={`${styles.categoryTag} ${styles.categoryNews}`}>Tutorial</a>
           </div>
         </div>
 
