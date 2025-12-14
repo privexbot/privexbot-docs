@@ -94,9 +94,11 @@ html {
   --ifm-footer-link-hover-color: var(--privexbot-white);
   --ifm-footer-title-color: var(--privexbot-white);
 
-  /* Code */
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  /* Code & Syntax Highlighting */
+  --ifm-code-font-size: 100%;
+  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.15);
+  --prism-background-color: #1e293b;
+  --prism-color: #e2e8f0;
 
   /* Typography */
   --ifm-font-family-base: 'Manrope', system-ui, -apple-system, sans-serif;
@@ -131,8 +133,10 @@ html {
   --ifm-color-content: #1e293b;
   --ifm-color-content-secondary: #64748b;
 
-  /* Code */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Code & Syntax Highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.08);
+  --prism-background-color: #f8fafc;
+  --prism-color: #334155;
 }
 
 /* Dark theme variables */
@@ -163,8 +167,10 @@ html {
   --ifm-color-content: var(--privexbot-white);
   --ifm-color-content-secondary: var(--privexbot-gray-400);
 
-  /* Code */
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  /* Code & Syntax Highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.15);
+  --prism-background-color: #0f172a;
+  --prism-color: #cbd5e1;
 }
 
 /* Enhanced Global Navbar Styles - Matching Figma Design */
@@ -193,10 +199,54 @@ html {
   }
 }
 
+/* Enhanced Navbar Container */
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1400px) {
+  .navbar__inner {
+    max-width: 1300px;
+  }
+}
+
+/* Logo Enhancement */
 .navbar__brand {
   font-weight: 600;
   font-size: 1.25rem;
   color: var(--privexbot-white) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar__logo {
+  height: 32px !important;
+  width: 32px !important;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .navbar__logo {
+    height: 36px !important;
+    width: 36px !important;
+  }
+
+  .navbar__brand {
+    font-size: 1.375rem;
+    gap: 1rem;
+  }
+}
+
+/* Navbar Items Spacing */
+.navbar__items {
+  gap: 0.5rem;
+}
+
+.navbar__items--right {
+  gap: 1rem;
 }
 
 .navbar__item {
@@ -361,4 +411,131 @@ a:not(.navbar__link):not(.button):hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Enhanced Code Block Styling */
+.prism-code {
+  background-color: var(--prism-background-color) !important;
+  color: var(--prism-color) !important;
+  border-radius: 12px;
+  font-family: 'Fira Code', 'JetBrains Mono', 'Monaco', 'Consolas', 'Ubuntu Mono', monospace !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .prism-code {
+    font-size: 1rem;
+  }
+}
+
+/* Copy button styling */
+.clean-btn {
+  background: rgba(99, 102, 241, 0.8) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  color: white !important;
+  padding: 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.clean-btn:hover {
+  background: var(--ifm-color-primary) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Syntax highlighting token improvements */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #64748b !important;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #94a3b8 !important;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f472b6 !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #34d399 !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #60a5fa !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #a78bfa !important;
+  font-weight: 500;
+}
+
+.token.function,
+.token.class-name {
+  color: #fbbf24 !important;
+  font-weight: 500;
+}
+
+/* Light theme syntax highlighting */
+[data-theme='light'] .token.comment,
+[data-theme='light'] .token.prolog,
+[data-theme='light'] .token.doctype,
+[data-theme='light'] .token.cdata {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .token.property,
+[data-theme='light'] .token.tag,
+[data-theme='light'] .token.boolean,
+[data-theme='light'] .token.number,
+[data-theme='light'] .token.constant,
+[data-theme='light'] .token.symbol {
+  color: #dc2626 !important;
+}
+
+[data-theme='light'] .token.selector,
+[data-theme='light'] .token.attr-name,
+[data-theme='light'] .token.string,
+[data-theme='light'] .token.char,
+[data-theme='light'] .token.builtin {
+  color: #059669 !important;
+}
+
+[data-theme='light'] .token.operator,
+[data-theme='light'] .token.entity,
+[data-theme='light'] .token.url {
+  color: #2563eb !important;
+}
+
+[data-theme='light'] .token.atrule,
+[data-theme='light'] .token.attr-value,
+[data-theme='light'] .token.keyword {
+  color: #7c3aed !important;
+}
+
+[data-theme='light'] .token.function,
+[data-theme='light'] .token.class-name {
+  color: #d97706 !important;
 }
