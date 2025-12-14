@@ -4,104 +4,74 @@ import {
   PageMetadata,
   HtmlClassNameProvider,
   ThemeClassNames,
-  translateTagsPageTitle,
 } from '@docusaurus/theme-common';
-import BlogLayout from '@theme/BlogLayout';
-import BlogListPaginator from '@theme/BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
 import type {Props} from '@theme/BlogTagsListPage';
 import PageLayout from '@site/src/components/PageLayout';
 import styles from './styles.module.css';
 
-function BlogTagsListPageMetadata({tag}: Props): React.JSX.Element {
-  const title = translateTagsPageTitle({
-    tagName: tag.label,
-    count: tag.count,
-  });
+function BlogTagsListPageMetadata(): React.JSX.Element {
   return (
     <>
-      <PageMetadata title={title} description={tag.description} />
-      <SearchMetadata tag="blog_tags_posts" />
+      <PageMetadata title="Blog Tags" description="Browse all blog tags and discover content by topic" />
+      <SearchMetadata tag="blog_tags_list" />
     </>
   );
 }
 
 function BlogTagsListPageContent(props: Props): React.JSX.Element {
-  const {tag, items, sidebar, listMetadata} = props;
+  const {tags} = props;
 
   return (
     <PageLayout
-      title={`${tag.label} Posts`}
-      description={tag.description || `All posts tagged with "${tag.label}"`}
-      heroCategory="Tagged Posts"
-      heroTitle={`Posts tagged "${tag.label}"`}
-      heroDescription={tag.description || `Discover all posts about ${tag.label.toLowerCase()}`}
+      title="Blog Tags"
+      description="Browse all blog tags and discover content by topic"
+      heroCategory="Browse Topics"
+      heroTitle="All Blog Tags"
+      heroDescription="Explore content by topic and find posts that match your interests"
       showGridBackground={true}
     >
       {/* Blog Content */}
       <div className={styles.blogContainer}>
         <div className={styles.tagInfo}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionCategory}>Tagged Posts</span>
+            <span className={styles.sectionCategory}>Browse Topics</span>
             <h2 className={styles.sectionTitle}>
-              {tag.count} post{tag.count !== 1 ? 's' : ''} tagged with "{tag.label}"
+              Discover {tags.length} topic{tags.length !== 1 ? 's' : ''} on our blog
             </h2>
           </div>
         </div>
 
-        {/* Blog Posts Grid */}
-        <div className={styles.blogGrid}>
-          {items.map(({content: BlogPostContent}, index) => {
-            const {metadata} = BlogPostContent;
-            return (
-              <article key={metadata.permalink} className={styles.blogCard}>
-                <div className={styles.blogCardImage}>
-                  <div className={styles.placeholderImage}>
-                    <div className={styles.logoPlaceholder}>
-                      <svg viewBox="0 0 100 40" fill="currentColor">
-                        <circle cx="15" cy="20" r="8" />
-                        <path d="M35 12h20v6H35z" />
-                        <path d="M35 22h15v6H35z" />
-                        <circle cx="75" cy="20" r="8" />
-                        <path d="M90 15h8v10h-8z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.blogCardContent}>
-                  <span className={`${styles.categoryTag} ${
-                    ['Architecture', 'TEE', 'Security'].includes(tag.label) ? styles.categoryEngineering :
-                    ['Product', 'Workflow'].includes(tag.label) ? styles.categoryDesign :
-                    ['Privacy', 'Tutorial'].includes(tag.label) ? styles.categoryCompany :
-                    styles.categoryNews
-                  }`}>
-                    {['Architecture', 'TEE', 'Security'].includes(tag.label) ? 'Engineering' :
-                     ['Product', 'Workflow'].includes(tag.label) ? 'Design' :
-                     ['Privacy', 'Tutorial'].includes(tag.label) ? 'Company' :
-                     'News'}
-                  </span>
-                  <h3 className={styles.blogCardTitle}>
-                    <a href={metadata.permalink}>{metadata.title}</a>
-                  </h3>
-                  <div className={styles.postMeta}>
-                    <span className={styles.author}>
-                      {metadata.authors?.[0]?.name || 'Privexbot Team'}
-                    </span>
-                    <span className={styles.date}>
-                      {new Date(metadata.date).toLocaleDateString('en-US', {
-                        day: 'numeric',
-                        month: 'short',
-                        year: 'numeric'
-                      })}
-                    </span>
-                  </div>
-                  <p className={styles.blogCardExcerpt}>
-                    {metadata.description || 'Explore innovative solutions and insights from our team.'}
+        {/* Tags Grid */}
+        <div className={styles.tagsGrid}>
+          {tags.map((tag) => (
+            <article key={tag.permalink} className={styles.tagCard}>
+              <div className={styles.tagCardContent}>
+                <span className={`${styles.categoryTag} ${
+                  ['architecture', 'tee', 'security'].includes(tag.label.toLowerCase()) ? styles.categoryEngineering :
+                  ['product', 'workflow'].includes(tag.label.toLowerCase()) ? styles.categoryDesign :
+                  ['privacy', 'tutorial'].includes(tag.label.toLowerCase()) ? styles.categoryCompany :
+                  styles.categoryNews
+                }`}>
+                  {['architecture', 'tee', 'security'].includes(tag.label.toLowerCase()) ? 'Engineering' :
+                   ['product', 'workflow'].includes(tag.label.toLowerCase()) ? 'Design' :
+                   ['privacy', 'tutorial'].includes(tag.label.toLowerCase()) ? 'Company' :
+                   'News'}
+                </span>
+                <h3 className={styles.tagCardTitle}>
+                  <a href={tag.permalink}>{tag.label}</a>
+                </h3>
+                <p className={styles.tagCardCount}>
+                  {tag.count} post{tag.count !== 1 ? 's' : ''}
+                </p>
+                {tag.description && (
+                  <p className={styles.tagCardDescription}>
+                    {tag.description}
                   </p>
-                </div>
-              </article>
-            );
-          })}
+                )}
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* Back to all posts link */}
@@ -110,9 +80,6 @@ function BlogTagsListPageContent(props: Props): React.JSX.Element {
             ← Back to all posts
           </a>
         </div>
-
-        {/* Pagination */}
-        {listMetadata && <BlogListPaginator metadata={listMetadata} />}
       </div>
     </PageLayout>
   );
@@ -125,7 +92,7 @@ export default function BlogTagsListPage(props: Props): React.JSX.Element {
         ThemeClassNames.wrapper.blogPages,
         ThemeClassNames.page.blogTagsListPage,
       )}>
-      <BlogTagsListPageMetadata {...props} />
+      <BlogTagsListPageMetadata />
       <BlogTagsListPageContent {...props} />
     </HtmlClassNameProvider>
   );

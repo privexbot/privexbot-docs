@@ -162,7 +162,7 @@ function BlogListPageContent(props: Props): React.JSX.Element {
 
         {/* Blog Posts Grid */}
         <div className={styles.blogGrid}>
-          {otherPosts.slice(0, 6).map(({content: BlogPostContent}, index) => {
+          {otherPosts.slice(0, items.length > 8 ? 6 : 5).map(({content: BlogPostContent}) => {
             const {metadata} = BlogPostContent;
             return (
               <article key={metadata.permalink} className={styles.blogCard}>
