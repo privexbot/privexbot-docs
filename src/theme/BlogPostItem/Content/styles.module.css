@@ -3,9 +3,10 @@
   color: var(--ifm-color-emphasis-700);
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   line-height: 1.75;
+  width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -192,11 +193,6 @@
   }
 }
 
-[data-theme='dark'] .blogPostContent pre {
-  background-color: var(--ifm-color-emphasis-100);
-  color: var(--ifm-color-emphasis-1000);
-}
-
 .blogPostContent pre code {
   background: none;
   padding: 0;
@@ -223,4 +219,9 @@
 
 .blogPostContent em {
   font-style: italic;
+}
+
+[data-theme='dark'] .blogPostContent pre {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-1000);
 }

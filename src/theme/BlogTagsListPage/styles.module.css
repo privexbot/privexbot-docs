@@ -1,14 +1,14 @@
-/* Blog Layout Container */
+/* Enhanced Blog Layout Container */
 .blogContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
-  background-color: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
   position: relative;
+  color: var(--ifm-font-color-base);
+  min-height: 100vh;
 }
 
-/* Full width background with extreme sections */
+/* Enhanced multi-layered background system */
 .blogContainer::before {
   content: '';
   position: fixed;
@@ -16,8 +16,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--ifm-background-surface-color);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(74, 144, 226, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(245, 158, 11, 0.02) 0%, transparent 50%),
+    var(--ifm-background-surface-color);
   z-index: -2;
+  transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blogContainer::after {
@@ -29,23 +34,35 @@
   width: 100vw;
   height: 100%;
   background: linear-gradient(90deg,
-    var(--ifm-color-emphasis-200) 0%,
-    var(--ifm-background-color) 12%,
-    var(--ifm-background-color) 88%,
-    var(--ifm-color-emphasis-200) 100%
+    rgba(var(--ifm-color-emphasis-200-rgb), 0.4) 0%,
+    rgba(var(--ifm-background-color-rgb), 0.95) 8%,
+    var(--ifm-background-color) 15%,
+    var(--ifm-background-color) 85%,
+    rgba(var(--ifm-background-color-rgb), 0.95) 92%,
+    rgba(var(--ifm-color-emphasis-200-rgb), 0.4) 100%
   );
   z-index: -1;
   pointer-events: none;
-  transition: background 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark mode specific adjustments */
+/* Enhanced dark mode with richer gradients */
+[data-theme='dark'] .blogContainer::before {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(74, 144, 226, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(245, 158, 11, 0.04) 0%, transparent 50%),
+    var(--ifm-background-surface-color);
+}
+
 [data-theme='dark'] .blogContainer::after {
   background: linear-gradient(90deg,
-    var(--ifm-color-emphasis-300) 0%,
-    var(--ifm-background-color) 10%,
-    var(--ifm-background-color) 90%,
-    var(--ifm-color-emphasis-300) 100%
+    rgba(var(--ifm-color-emphasis-400-rgb), 0.3) 0%,
+    rgba(var(--ifm-background-color-rgb), 0.9) 6%,
+    var(--ifm-background-color) 12%,
+    var(--ifm-background-color) 88%,
+    rgba(var(--ifm-background-color-rgb), 0.9) 94%,
+    rgba(var(--ifm-color-emphasis-400-rgb), 0.3) 100%
   );
 }
 
@@ -125,40 +142,90 @@
 }
 
 .tagCard {
-  background: var(--ifm-card-background-color);
-  border-radius: 12px;
+  background: rgba(var(--ifm-card-background-color-rgb), 0.85);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid var(--ifm-color-emphasis-300);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(var(--ifm-color-emphasis-200-rgb), 0.6);
   height: fit-content;
-  min-height: 140px;
+  min-height: 160px;
+  position: relative;
+  backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tagCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .tagCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(var(--ifm-color-primary-rgb), 0.3);
+}
+
+.tagCard:hover::before {
+  opacity: 1;
+}
+
+[data-theme='dark'] .tagCard {
+  background: rgba(var(--ifm-card-background-color-rgb), 0.8);
+  border: 1px solid rgba(var(--ifm-color-emphasis-400-rgb), 0.4);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .tagCard:hover {
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 8px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(var(--ifm-color-primary-rgb), 0.5);
 }
 
 @media (max-width: 640px) {
   .tagCard:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px) scale(1.01);
   }
 }
 
 .tagCardContent {
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
+  min-height: 140px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 640px) {
   .tagCardContent {
-    padding: 1.25rem;
+    padding: 1.5rem 1.25rem;
+    min-height: 120px;
   }
 }
 
@@ -167,68 +234,162 @@
   color: white;
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  padding: 0.375rem 1rem;
+  border-radius: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.025em;
-  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.categoryTag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.tagCard:hover .categoryTag::before {
+  left: 100%;
 }
 
 .categoryDesign {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #2563eb 100%);
 }
 
 .categoryEngineering {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #10b981 0%, #047857 50%, #059669 100%);
 }
 
 .categoryCompany {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  background: linear-gradient(135deg, #f59e0b 0%, #b45309 50%, #d97706 100%);
 }
 
 .categoryNews {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 50%, #7c3aed 100%);
+}
+
+.tagCard:hover .categoryTag {
+  transform: scale(1.05);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.2),
+    0 3px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .tagCardTitle {
   color: var(--ifm-color-emphasis-900);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
   line-height: 1.3;
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg,
+    var(--ifm-color-emphasis-900) 0%,
+    var(--ifm-color-emphasis-700) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tagCardTitle a {
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s ease;
+  background: inherit;
+  background-clip: inherit;
+  -webkit-background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tagCardTitle a:hover {
-  color: var(--ifm-color-primary);
+.tagCard:hover .tagCardTitle a {
+  background: linear-gradient(135deg,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-primary-dark) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .tagCardTitle {
+  background: linear-gradient(135deg,
+    var(--ifm-color-emphasis-100) 0%,
+    var(--ifm-color-emphasis-300) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='dark'] .tagCard:hover .tagCardTitle a {
+  background: linear-gradient(135deg,
+    var(--ifm-color-primary-light) 0%,
+    var(--ifm-color-primary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tagCardCount {
   color: var(--ifm-color-emphasis-600);
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin: 0 0 0.5rem 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  background: var(--ifm-color-primary);
+  background: linear-gradient(135deg,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-primary-dark) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.tagCard:hover .tagCardCount {
+  transform: scale(1.05);
 }
 
 .tagCardDescription {
   color: var(--ifm-color-emphasis-600);
-  font-size: 0.8125rem;
-  line-height: 1.5;
+  font-size: 0.875rem;
+  line-height: 1.6;
   margin: 0;
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.tagCard:hover .tagCardDescription {
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .tagCardDescription {
+  color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .tagCard:hover .tagCardDescription {
+  color: var(--ifm-color-emphasis-300);
 }
 
 /* Back to all posts */
@@ -248,28 +409,67 @@
   align-items: center;
   color: var(--ifm-color-primary);
   text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid var(--ifm-color-primary);
-  border-radius: 24px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 28px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
-  background-color: transparent;
+  background: linear-gradient(var(--ifm-background-color), var(--ifm-background-color)) padding-box,
+              linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark)) border-box;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 4px 16px rgba(var(--ifm-color-primary-rgb), 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.backLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-primary-dark) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .backLink:hover {
-  background-color: var(--ifm-color-primary);
   color: white;
   text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 12px 32px rgba(var(--ifm-color-primary-rgb), 0.2),
+    0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.backLink:hover::before {
+  opacity: 1;
 }
 
 .backLink:focus {
   outline: 2px solid var(--ifm-color-primary);
-  outline-offset: 2px;
+  outline-offset: 3px;
   text-decoration: none;
+}
+
+[data-theme='dark'] .backLink {
+  box-shadow:
+    0 4px 16px rgba(var(--ifm-color-primary-rgb), 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .backLink:hover {
+  box-shadow:
+    0 12px 32px rgba(var(--ifm-color-primary-rgb), 0.3),
+    0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive adjustments */

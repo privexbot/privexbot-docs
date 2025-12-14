@@ -1,8 +1,8 @@
 /* Blog Post Container */
 .blogPostContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 4rem 0;
   background-color: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
   overflow-x: hidden;
@@ -53,10 +53,11 @@
 
 /* Blog Post Header */
 .blogPostHeader {
+  width: 100%;
   max-width: 720px;
   margin: 0 auto 3rem auto;
   position: relative;
-  padding-bottom: 2rem;
+  padding: 0 2rem 2rem 2rem;
   text-align: center;
 }
 
@@ -169,8 +170,10 @@
 
 /* Hero Image */
 .heroImage {
+  width: 100%;
   max-width: 720px;
   margin: 0 auto 3rem auto;
+  padding: 0 2rem;
 }
 
 @media (min-width: 768px) {
@@ -222,15 +225,26 @@
   height: 100%;
 }
 
-/* Simplified Content Layout - no sidebar since BlogLayout handles it */
+/* Simplified Content Layout - BlogLayout handles the grid */
 .contentLayout {
   width: 100%;
-  max-width: 100%;
 }
 
 /* Main Content */
 .mainContent {
-  max-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* Ensure BlogPostPaginator has proper spacing within the layout */
+.mainContent :global(.blogPostPaginator) {
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .mainContent :global(.blogPostPaginator) {
+    margin-top: 2rem;
+  }
 }
 
 /* Override default blog post item styles */
@@ -534,18 +548,53 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .blogPostContainer {
-    padding: 2rem 1.25rem;
+    padding: 2rem 0;
   }
 
   .blogPostHeader {
     margin-bottom: 2rem;
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+
+  .heroImage {
+    padding: 0 1.5rem;
+  }
+
+  .mainContent {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .blogPostHeader {
+    padding: 0 1.25rem 2rem 1.25rem;
+  }
+
+  .heroImage {
+    padding: 0 1.25rem;
+  }
+
+  .mainContent {
+    padding: 0 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
   .blogPostContainer {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .blogPostHeader {
+    padding: 0 1rem 1.5rem 1rem;
+  }
+
+  .heroImage {
+    padding: 0 1rem;
+  }
+
+  .mainContent {
+    padding: 0 1rem;
   }
 }

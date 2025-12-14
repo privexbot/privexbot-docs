@@ -1,0 +1,136 @@
+/* Blog Post Paginator Container */
+.paginatorContainer {
+  width: 100%;
+  margin-top: 3rem;
+  padding: 3rem 2rem 2rem 2rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+@media (max-width: 768px) {
+  .paginatorContainer {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .paginatorContainer {
+    padding: 2rem 1.25rem 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .paginatorContainer {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+}
+
+/* Pagination Navigation */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .pagination {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* Individual Pagination Items */
+.paginationItem {
+  flex: 1;
+  min-width: 0;
+}
+
+.paginationItem:nth-child(2) {
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .paginationItem:nth-child(2) {
+    text-align: left;
+  }
+}
+
+/* Override default Docusaurus pagination link styles */
+.paginatorContainer :global(.pagination-nav__link) {
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-background-surface-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: block;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.paginatorContainer :global(.pagination-nav__link:hover) {
+  background-color: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.paginatorContainer :global(.pagination-nav__sublabel) {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
+.paginatorContainer :global(.pagination-nav__label) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+  line-height: 1.4;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .paginatorContainer :global(.pagination-nav__label) {
+    font-size: 1.125rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .paginatorContainer :global(.pagination-nav__link) {
+  background-color: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .paginatorContainer :global(.pagination-nav__link:hover) {
+  background-color: var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-primary);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .paginatorContainer :global(.pagination-nav__link) {
+    padding: 1rem 1.25rem;
+  }
+
+  .paginatorContainer :global(.pagination-nav__label) {
+    font-size: 0.9375rem;
+  }
+
+  .paginatorContainer :global(.pagination-nav__sublabel) {
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .paginatorContainer :global(.pagination-nav__link) {
+    padding: 0.875rem 1rem;
+  }
+}
