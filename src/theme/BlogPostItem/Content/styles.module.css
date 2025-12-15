@@ -1,7 +1,7 @@
 /* Blog Post Content Styling */
 .blogPostContent {
   color: var(--ifm-color-emphasis-700);
-  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-family: "Manrope", system-ui, -apple-system, sans-serif;
   line-height: 1.75;
   width: 100%;
   max-width: 720px;
@@ -23,7 +23,7 @@
 .blogPostContent h6 {
   color: var(--ifm-color-emphasis-900);
   font-weight: 600;
-  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-family: "Manrope", system-ui, -apple-system, sans-serif;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
@@ -173,7 +173,8 @@
   padding: 0.2rem 0.4rem;
   border-radius: 6px;
   font-size: 0.9rem;
-  font-family: 'Fira Code', 'JetBrains Mono', 'Monaco', 'Consolas', 'Ubuntu Mono', monospace;
+  font-family: "Fira Code", "JetBrains Mono", "Monaco", "Consolas",
+    "Ubuntu Mono", monospace;
   font-weight: 500;
   border: 1px solid rgba(99, 102, 241, 0.2);
 }
@@ -213,28 +214,28 @@
 }
 
 /* Light theme code blocks */
-[data-theme='light'] .blogPostContent pre {
+[data-theme="light"] .blogPostContent pre {
   background-color: #f8fafc;
   color: #334155;
   border-color: #e2e8f0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme='light'] .blogPostContent code {
+[data-theme="light"] .blogPostContent code {
   background-color: rgba(99, 102, 241, 0.08);
   color: var(--ifm-color-primary-darkest);
   border-color: rgba(99, 102, 241, 0.15);
 }
 
 /* Dark theme code blocks */
-[data-theme='dark'] .blogPostContent pre {
+[data-theme="dark"] .blogPostContent pre {
   background-color: #0f172a;
   color: #cbd5e1;
   border-color: #1e293b;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-[data-theme='dark'] .blogPostContent code {
+[data-theme="dark"] .blogPostContent code {
   background-color: rgba(99, 102, 241, 0.15);
   color: #a5b4fc;
   border-color: rgba(99, 102, 241, 0.25);
@@ -281,7 +282,30 @@
   font-style: italic;
 }
 
-[data-theme='dark'] .blogPostContent pre {
-  background-color: var(--ifm-color-emphasis-100);
-  color: var(--ifm-color-emphasis-1000);
+/* Enhanced code block formatting for better readability */
+.blogPostContent pre {
+  font-family: "Fira Code", "JetBrains Mono", "Monaco", "Consolas",
+    "Ubuntu Mono", monospace !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+}
+
+/* Copy code button improvements */
+.blogPostContent .prism-code .token-line {
+  min-height: 1.5rem;
+}
+
+/* Ensure proper code block rendering in both themes */
+[data-theme="light"] .blogPostContent pre {
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="dark"] .blogPostContent pre {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+  border: 1px solid #1e293b !important;
 }

@@ -313,12 +313,12 @@
   }
 }
 
-/* Enhanced Category Tags with Better Gradients */
+/* Enhanced Category Tags with WCAG-Compliant Contrast Ratios */
 .categoryTag {
   display: inline-block;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 700;
+  color: #ffffff; /* White text for high contrast */
+  font-size: 0.8rem; /* Slightly larger for better readability */
+  font-weight: 700; /* Bolder for better contrast */
   padding: 0.5rem 1rem;
   border-radius: 16px;
   text-transform: uppercase;
@@ -328,6 +328,11 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for better readability */
+  min-height: 44px; /* WCAG minimum touch target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .categoryTag::before {
@@ -346,23 +351,23 @@
 }
 
 .categoryDesign {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 50%, #1e3a8a 100%); /* Darker blues for better contrast */
+  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4);
 }
 
 .categoryEngineering {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%); /* Darker reds for better contrast */
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
 }
 
 .categoryCompany {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+  background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%); /* Darker teals for better contrast */
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
 }
 
 .categoryNews {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  box-shadow: 0 4px 15px rgba(67, 233, 123, 0.4);
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%); /* Darker purples for better contrast */
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
 }
 
 /* Enhanced Typography */

@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # Development service with hot reload
+  privexbot-docs-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: privexbot-docs-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount source code for hot reload (excluding node_modules)
+      - .:/app
+      - /app/node_modules
+      - /app/build
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true # For file watching in Docker
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - privexbot-network
+
+  # Production service
+  privexbot-docs-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: privexbot-docs-prod
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - privexbot-network
+    labels:
+      - "com.privexbot.service=docs"
+      - "com.privexbot.environment=production"
+
+networks:
+  privexbot-network:
+    driver: bridge
+    name: privexbot-network
+
+# Optional: Add volumes for persistent data if needed
+volumes:
+  node_modules:
+    name: privexbot-docs-node-modules
