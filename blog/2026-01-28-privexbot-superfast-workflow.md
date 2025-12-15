@@ -1,7 +1,7 @@
 ---
 slug: privexbot-superfast-workflow
 title: How Privexbot will make your chatbot workflow superfast
-authors: [ethan]
+authors: [harrison]
 tags: [product, workflow, chatbots, privacy]
 image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false

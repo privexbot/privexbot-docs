@@ -1,0 +1,66 @@
+/* Social Links Styling */
+.authorSocials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-700);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.socialLink:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.socialLink svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .socialLink {
+  background-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-800);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .socialLink:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .authorSocials {
+    gap: 0.5rem;
+  }
+
+  .socialLink {
+    width: 28px;
+    height: 28px;
+  }
+
+  .socialLink svg {
+    width: 14px;
+    height: 14px;
+  }
+}

@@ -1,7 +1,7 @@
 ---
 slug: why-chatbot-privacy-matters-your-business
 title: Why Chatbot Privacy Matters for Your Business
-authors: [ethan]
+authors: [harrison]
 tags: [privacy, chatbots]
 image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false

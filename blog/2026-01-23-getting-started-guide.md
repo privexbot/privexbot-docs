@@ -1,7 +1,7 @@
 ---
 slug: getting-started-guide
 title: Building Your First Privacy-First Chatbot in 10 Minutes
-authors: [kara]
+authors: [harrison]
 tags: [tutorial, getting-started, privacy, chatbots]
 image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false

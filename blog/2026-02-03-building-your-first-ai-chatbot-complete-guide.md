@@ -1,7 +1,7 @@
 ---
 slug: building-your-first-ai-chatbot-complete-guide
 title: "Building Your First AI Chatbot: A Complete Guide"
-authors: [kara]
+authors: [harrison]
 tags: [tutorial, getting-started]
 image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false
