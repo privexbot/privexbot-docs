@@ -1,0 +1,112 @@
+/* Enhanced Documentation Root Layout */
+.docRoot {
+  position: relative;
+  min-height: 100vh;
+  background: var(--ifm-background-color);
+  overflow-x: hidden;
+}
+
+/* Enhanced Background Pattern */
+.backgroundPattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: var(--doc-root-bg, linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%));
+
+  /* Grid Background Pattern */
+  background-image:
+    linear-gradient(var(--grid-color, rgba(148, 163, 184, 0.05)) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color, rgba(148, 163, 184, 0.05)) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 0;
+
+  /* Subtle animation */
+  animation: gridFloat 60s linear infinite;
+}
+
+[data-theme='dark'] .backgroundPattern {
+  --doc-root-bg: linear-gradient(135deg, var(--privexbot-black) 0%, var(--privexbot-gray-900) 100%);
+  --grid-color: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme='light'] .backgroundPattern {
+  --doc-root-bg: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --grid-color: rgba(148, 163, 184, 0.05);
+}
+
+@keyframes gridFloat {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 40px 40px, 40px 40px;
+  }
+}
+
+/* Enhanced Container */
+.docRootContainer {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background: transparent;
+}
+
+/* Add subtle depth to the content area */
+.docRootContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at top center,
+    transparent 0%,
+    var(--depth-overlay, rgba(88, 101, 242, 0.02)) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme='dark'] .docRootContainer::before {
+  --depth-overlay: rgba(88, 101, 242, 0.03);
+}
+
+[data-theme='light'] .docRootContainer::before {
+  --depth-overlay: rgba(88, 101, 242, 0.02);
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .backgroundPattern {
+    background-size: 30px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .backgroundPattern {
+    background-size: 25px 25px;
+    animation: gridFloat 45s linear infinite;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .backgroundPattern {
+    animation: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .backgroundPattern {
+    display: none;
+  }
+
+  .docRootContainer::before {
+    display: none;
+  }
+}

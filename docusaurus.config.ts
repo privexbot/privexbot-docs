@@ -67,7 +67,71 @@ const config: Config = {
     ],
   ],
 
+  themes: ['@docusaurus/theme-mermaid'],
+
+  markdown: {
+    mermaid: true,
+  },
+
   themeConfig: {
+    // Mermaid configuration
+    mermaid: {
+      theme: {
+        light: 'neutral',
+        dark: 'dark',
+      },
+      options: {
+        fontFamily: 'Manrope, system-ui, -apple-system, sans-serif',
+        fontSize: 14,
+        fontWeight: 500,
+        wrap: true,
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 15,
+          nodeSpacing: 50,
+          rankSpacing: 50,
+        },
+        sequence: {
+          useMaxWidth: true,
+          diagramMarginX: 15,
+          diagramMarginY: 15,
+          actorMargin: 30,
+          width: 150,
+          height: 50,
+          boxMargin: 8,
+          boxTextMargin: 4,
+          noteMargin: 8,
+          messageMargin: 25,
+        },
+        gantt: {
+          useMaxWidth: true,
+          leftPadding: 50,
+          gridLineStartPadding: 25,
+          fontSize: 12,
+          sectionFontSize: 14,
+        },
+        journey: {
+          useMaxWidth: true,
+          diagramMarginX: 25,
+          diagramMarginY: 15,
+        },
+        timeline: {
+          useMaxWidth: true,
+          diagramMarginX: 25,
+          diagramMarginY: 15,
+        },
+        mindmap: {
+          useMaxWidth: true,
+          padding: 15,
+        },
+        gitgraph: {
+          useMaxWidth: true,
+          diagramPadding: 15,
+        },
+      },
+    },
     // Replace with your project's social card
     image: 'img/privexbot-social-card.jpg',
     colorMode: {

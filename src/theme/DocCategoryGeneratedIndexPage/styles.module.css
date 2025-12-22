@@ -1,0 +1,434 @@
+/* Category Page Wrapper - Applies enhanced styling to default component */
+.categoryPageWrapper {
+  /* Apply our custom styling to the default Docusaurus category page */
+}
+
+/* Target the default Docusaurus elements */
+.categoryPageWrapper :global(.container) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  animation: categoryFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.categoryPageWrapper :global(.row) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem 2.5rem;
+  margin-top: 4rem;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+
+.categoryPageWrapper :global(.col) {
+  padding: 0;
+}
+
+.categoryHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.categoryBreadcrumbs {
+  margin-bottom: 2rem;
+}
+
+.categoryTitleSection {
+  margin-bottom: 2rem;
+}
+
+.categoryTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--privexbot-white) 0%,
+    var(--privexbot-gray-300) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  line-height: 1.2;
+  animation: titleSlideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.categoryUnderline {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(135deg, var(--privexbot-blue) 0%, #6366f1 100%);
+  border-radius: 2px;
+  margin: 0 auto;
+  animation: underlineGrow 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+}
+
+.categoryDescription {
+  font-size: 1.25rem;
+  color: var(--privexbot-gray-400);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  animation: descriptionFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.8s both;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 3rem 2.5rem;
+  margin-top: 4rem;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+
+.categoryCard {
+  display: flex;
+  align-items: flex-start;
+  padding: 2.5rem 2rem;
+  background: var(--card-bg, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--card-border, rgba(255, 255, 255, 0.1));
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: cardSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) var(--card-delay, 0s) both;
+  min-height: 120px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.categoryCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    rgba(88, 101, 242, 0.1) 0%,
+    rgba(139, 69, 19, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.categoryCard:hover::before {
+  opacity: 1;
+}
+
+.categoryCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(88, 101, 242, 0.1);
+  border-color: var(--privexbot-blue);
+}
+
+.categoryCardIcon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--privexbot-blue) 0%, #6366f1 100%);
+  border-radius: 12px;
+  margin-right: 2rem;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.categoryCard:hover .categoryCardIcon {
+  transform: scale(1.1);
+}
+
+.categoryCardIcon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--privexbot-white);
+}
+
+.categoryCardContent {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80px;
+  height: 100%;
+}
+
+.categoryCardTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: var(--ifm-font-color-base);
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.categoryCardDescription {
+  font-size: 1rem;
+  color: var(--privexbot-gray-400);
+  margin: 0;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  flex-grow: 1;
+}
+
+.categoryCardArrow {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--privexbot-gray-500);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.categoryCard:hover .categoryCardArrow {
+  color: var(--privexbot-blue);
+  transform: translateX(4px);
+}
+
+/* Theme-specific adjustments */
+[data-theme='dark'] .categoryCard {
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light'] .categoryCard {
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes categoryFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineGrow {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes descriptionFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Responsive design */
+@media (max-width: 1400px) {
+  .categoryPageWrapper :global(.row),
+  .categoryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem 2rem;
+  }
+
+  .categoryCard {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .categoryContainer {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .categoryPageWrapper :global(.row),
+  .categoryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .categoryCard {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .categoryContainer {
+    padding: 2rem 1.25rem;
+  }
+
+  .categoryPageWrapper :global(.row),
+  .categoryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .categoryCard {
+    padding: 2rem 1.5rem;
+    min-height: auto;
+  }
+
+  .categoryCardIcon {
+    width: 48px;
+    height: 48px;
+    margin-right: 1.5rem;
+  }
+
+  .categoryCardTitle {
+    font-size: 1.2rem;
+  }
+
+  .categoryCardDescription {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .categoryContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .categoryTitle {
+    font-size: 2.5rem;
+  }
+
+  .categoryDescription {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .categoryPageWrapper :global(.row),
+  .categoryGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  .categoryCard {
+    padding: 2rem 1.5rem;
+    margin: 0 0.5rem;
+    min-height: auto;
+  }
+
+  .categoryCardIcon {
+    width: 44px;
+    height: 44px;
+    margin-right: 1.25rem;
+  }
+
+  .categoryCardIcon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .categoryCardTitle {
+    font-size: 1.15rem;
+  }
+
+  .categoryCardDescription {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryContainer {
+    padding: 1rem 0.75rem;
+  }
+
+  .categoryTitle {
+    font-size: 2rem;
+  }
+
+  .categoryDescription {
+    font-size: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .categoryGrid {
+    gap: 1.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .categoryCard {
+    padding: 1.75rem 1.25rem;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0.25rem;
+  }
+
+  .categoryCardIcon {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .categoryCardIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .categoryCardTitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .categoryCardDescription {
+    font-size: 0.9rem;
+  }
+
+  .categoryCardArrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}

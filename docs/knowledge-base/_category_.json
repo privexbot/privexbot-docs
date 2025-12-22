@@ -1,0 +1,8 @@
+{
+  "label": "Knowledge Base",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to create and manage knowledge bases for intelligent AI chatbots"
+  }
+}

@@ -101,7 +101,7 @@ export default function HomepageFeatures(): ReactNode {
           </Link>
           <Link
             className={clsx('button button--secondary button--lg', styles.ctaButton)}
-            to="/docs/tutorial-basics/create-a-document">
+            to="/docs/knowledge-base/creation-guide">
             View Examples
           </Link>
         </div>
