@@ -1,15 +1,23 @@
-/* Social Links Styling */
+/* Social Links Styling - Enhanced with bottom margin to prevent cut-off */
 .authorSocials {
+  display: block !important;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  clear: both;
+  position: relative;
+}
+
+.authorSocials > * {
   display: flex;
   gap: 0.75rem;
-  margin-top: 0.5rem;
   align-items: center;
-  position: relative;
-  z-index: 10;
+  justify-content: flex-start;
 }
 
 .socialLink {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   width: 32px;
@@ -21,8 +29,10 @@
   text-decoration: none;
   border: 1px solid var(--ifm-color-emphasis-300);
   position: relative;
-  z-index: 10;
+  z-index: 1000;
   flex-shrink: 0;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .socialLink:hover {

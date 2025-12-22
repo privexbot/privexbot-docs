@@ -2,12 +2,30 @@
 .blogPostContainer {
   width: 100%;
   margin: 0;
-  padding: 4rem 0;
+  padding: 4rem 1.5rem;
   background-color: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
   overflow-x: hidden;
   box-sizing: border-box;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .blogPostContainer {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blogPostContainer {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blogPostContainer {
+    padding: 4rem 4rem;
+  }
 }
 
 /* Full width background with extreme sections */
@@ -233,7 +251,25 @@
 /* Main Content */
 .mainContent {
   width: 100%;
-  padding: 0;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .mainContent {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mainContent {
+    padding: 0 2.5rem;
+  }
 }
 
 /* Ensure BlogPostPaginator has proper spacing within the layout */
@@ -244,6 +280,23 @@
 @media (max-width: 768px) {
   .mainContent :global(.blogPostPaginator) {
     margin-top: 2rem;
+  }
+}
+
+/* Main markdown content container padding */
+.mainContent :global(.markdown) {
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .mainContent :global(.markdown) {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainContent :global(.markdown) {
+    padding: 1rem;
   }
 }
 
