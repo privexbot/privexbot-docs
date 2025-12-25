@@ -1,12 +1,12 @@
 harrison:
   name: Harrison Eze
   title: Software Engineer
-  url: https://www.linkedin.com/in/harrison-eze-dev
+  url: /authors/harrison
   image_url: https://github.com/privexbot.png
   page: true
   socials:
     x: https://x.com/Harystylesdev
-    linkedin: harrisoneze
+    linkedin: https://www.linkedin.com/in/harrison-eze-dev
     github: harrisoneze
     telegram: https://t.me/DevHarystyles
 

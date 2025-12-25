@@ -92,20 +92,6 @@ function BlogPostPageContent({children}: {children?: React.ReactNode}): React.JS
             <p className={styles.blogPostSubtitle}>{metadata.description}</p>
           )}
 
-          {metadata.authors && metadata.authors.length > 0 && (
-            <div className={styles.authorInfo}>
-              <div className={styles.authorAvatar}>
-                {metadata.authors[0].imageURL ? (
-                  <img src={metadata.authors[0].imageURL} alt={metadata.authors[0].name} />
-                ) : (
-                  <div className={styles.defaultAvatar}>
-                    {metadata.authors[0].name?.charAt(0) || 'A'}
-                  </div>
-                )}
-              </div>
-              <span className={styles.authorName}>{metadata.authors[0].name}</span>
-            </div>
-          )}
         </header>
 
         {/* Hero Image */}

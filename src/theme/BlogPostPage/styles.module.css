@@ -286,6 +286,8 @@
 /* Main markdown content container padding */
 .mainContent :global(.markdown) {
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
